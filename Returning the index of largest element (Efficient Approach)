@@ -1,14 +1,14 @@
-#include<bits/stdc++.h>   //o(n)
+#include<bits/stdc++.h>
 using namespace std;
 
 int greatestElement(int arr[], int n)
 {
-    int res=arr[0];
+    int res=0;
     for(int i=1; i<n; i++)
     {
-        if(arr[i]>res)
+        if(arr[i]>arr[res])
         {
-            res=arr[i];
+            arr[res]=arr[i];
         }
     }
     
@@ -18,7 +18,8 @@ int greatestElement(int arr[], int n)
 int main()
 {
     int arr[]={2,5,8,1,90,100};
-   cout<< greatestElement(arr,6);
+   int p= greatestElement(arr,6);
+   cout<<arr[p];
     
     
 }
