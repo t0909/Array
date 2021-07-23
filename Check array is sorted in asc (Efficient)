@@ -1,0 +1,36 @@
+// an will always be greater than an-1
+
+//same for descending
+
+#include<bits/stdc++.h>
+using namespace std;
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+bool isSortedAsc(int arr[], int n)
+{
+    
+    for(int i=1; i<n; i++)
+    {
+        if(arr[i]<arr[i-1]) // > for descending
+        return false;
+    }
+    return true;
+    
+    
+}
+
+int main()
+{
+   int arr[]={8,10,20,30,40,50};
+   
+   if(isSortedAsc(arr,6))
+   cout<<"Sorted";
+   else
+   cout<<"Not Sorted";
+   
+    
+    
+}
