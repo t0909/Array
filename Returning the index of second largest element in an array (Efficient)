@@ -1,0 +1,38 @@
+#include<bits/stdc++.h> // O(n)
+using namespace std;
+
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int secondLargest(int arr[], int n)
+{
+    int res=-1; // CONTAINING SECOND LARGEST ELEMENT
+    int largest = 0;  // CONTAINING LARGEST ELEMENT
+    
+    for(int i=1; i<n; i++)
+    {
+        if(arr[i]>arr[largest])
+        {
+            res=largest;
+            largest=i;
+        }
+        
+        else if(arr[i]!=arr[largest])
+        {
+            if(res==-1 || arr[i]>arr[res])
+            res=i;
+        }
+    }
+    return res;
+}
+
+int main()
+{
+    int arr[]={100,90,8,1,5,2};
+   int p= secondLargest(arr,6);
+   cout<<arr[p]<<endl;
+   
+    
+    
+}
