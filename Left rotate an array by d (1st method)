@@ -1,0 +1,42 @@
+
+// theta(nd)
+#include<bits/stdc++.h>
+using namespace std;
+
+
+
+void lrotateOne(int arr[], int n)
+{
+    
+  int temp = arr[0];
+  
+  for(int i=0; i<n-1; i++)
+  {
+      arr[i]=arr[i+1];
+  }
+  
+  arr[n-1]=temp;
+}
+
+void lrotateD(int arr[], int n, int d)
+{
+    for(int i=1; i<=d; i++)
+    {
+        lrotateOne(arr,n);
+    }
+    
+}
+
+int main()
+{
+   int arr[]={800,0,2,20,51,5};
+   
+  lrotateD(arr,6,4);
+   
+   for(int i=0; i<6; i++)
+   cout<<arr[i]<<" ";
+   
+   
+    
+    
+}
