@@ -1,0 +1,44 @@
+
+// theta(n)
+//aux- theta(1)
+#include<bits/stdc++.h>
+using namespace std;
+
+void reverse(int arr[], int low, int high)
+{
+   
+    
+    while(low<high)
+    {
+        swap(arr[low],arr[high]);
+        low++;
+        high--;
+    }
+    
+}
+
+
+
+
+void lrotateD(int arr[], int n, int d)
+{
+    reverse(arr,0,d-1);
+    reverse(arr,d,n-1);
+    reverse(arr,0,n-1);
+    
+    
+}
+
+int main()
+{
+   int arr[]={800,0,2,20,51,5};
+   
+  lrotateD(arr,6,4);
+   
+   for(int i=0; i<6; i++)
+   cout<<arr[i]<<" ";
+   
+   
+    
+    
+}
