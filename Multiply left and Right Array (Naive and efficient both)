@@ -1,0 +1,38 @@
+int multiply(int arr[], int n)
+{
+//efficient
+    int i=0;
+    int j=n-1;
+    int sumL=0, sumR=0;
+  
+        while(i<j)
+        {
+          sumL+=arr[i];i++;
+          sumR+=arr[j];j--;
+            
+        }
+        
+        if(i==j)
+        {
+            sumR+=arr[j];
+            
+        }
+        
+        
+    
+    return  sumR*sumL;
+    
+    //Naive
+    // int sumL=0, sumR=0;
+    // for(int i=0; i<n/2; i++)
+    // {
+    //     sumL+=arr[i];
+    // }
+    
+    // for(int i=n/2; i<n;i++)
+    // {
+    //     sumR+=arr[i];
+    // }
+    
+    // return sumL*sumR;
+}
